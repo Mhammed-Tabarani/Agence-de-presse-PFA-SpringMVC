@@ -5,18 +5,15 @@ using System.Web;
 
 namespace Agence_de_Presse.Models
 {
-    public class Journaliste
+    public class RedacteurEnChef
     {
-        public int JournalisteID { get; set; }
+        public int RedacteurEnChefID { get; set; }
         public string Nom { get; set; }
         public string PreNom { get; set; }
         public string Nationalite { get; set; }
         public string Email { get; set; }
-
         public string Adresse { get; set; }
         public virtual Compte Compte { get; set; }
-        public virtual ICollection<SuivreJournaliste> SuivreJournalistes { get; set; }
         public virtual ICollection<Article> Articles { get; set; }
-
     }
 }

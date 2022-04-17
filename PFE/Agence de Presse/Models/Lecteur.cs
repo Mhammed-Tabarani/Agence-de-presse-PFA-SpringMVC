@@ -5,18 +5,14 @@ using System.Web;
 
 namespace Agence_de_Presse.Models
 {
-    public class Journaliste
+    public class Lecteur
     {
-        public int JournalisteID { get; set; }
+        public int LecteurID { get; set; }
         public string Nom { get; set; }
         public string PreNom { get; set; }
-        public string Nationalite { get; set; }
         public string Email { get; set; }
-
-        public string Adresse { get; set; }
         public virtual Compte Compte { get; set; }
         public virtual ICollection<SuivreJournaliste> SuivreJournalistes { get; set; }
-        public virtual ICollection<Article> Articles { get; set; }
-
+        public virtual ICollection<Commentaire> Commentaires { get; set; }
     }
 }
